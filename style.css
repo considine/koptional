@@ -1,0 +1,56 @@
+.sitetitle {
+	padding: 2px;
+	border: solid black 2px;
+	font-size: 200%;
+	text-align: center;
+}
+
+.neworder {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.begin {
+	position: relative;
+	top: 150px;
+	width: 100%;
+	text-align: center;
+	visibility: hidden;
+
+}
+.order {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	width: 300px;
+}
+
+.ordertitle {
+	font-size: 175%;
+}
+
+.lefty {
+	text-align: left;
+	position: relative;
+	left: -200px;
+}
+
+.item {
+	display: block;
+	width: 200px;
+}
+
+.huge {
+	height: 200px;
+	width: 200px;
+	font-size: 300%;
+}
+
+.neworder {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	position: relative;
+	right: -200px;
+}

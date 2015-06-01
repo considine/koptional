@@ -1,0 +1,16 @@
+var main = function () {
+	"use strict";
+
+	$(".buttons button").on("click", function (event) {
+		var $new_comment = $("<p>");
+		$new_comment.text("hey");
+		$(".order").append($new_comment);
+		console.log("hello");
+		if (button.class == "whopper") {
+			console.log("this");
+		}
+
+	});
+};
+
+$(document).ready(main);
