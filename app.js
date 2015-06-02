@@ -9,6 +9,9 @@ var main = function () {
 		$("button").removeClass("huge");
 		$(".outside").remove();
 		$("ol").empty();
+		sliders=0;
+		whoppers=0;
+		doubles=0;
 	});
 }
 
@@ -17,14 +20,20 @@ var add = function () {
 	
 	$(".Slider").on("click", function () {
 		sliders+=1;
-		$(".orderlist").append('<div class="item"> <li> Slider- $3 x'+sliders+' </li> <button class="x"> x </button> </div>');
+		$(".slider").remove();
+		$(".orderlist").append('<div class="item slider"> <li> Slider- $3 x'+sliders+' </li> <button class="x"> x </button> </div>');
+
 	});
 
 	$(".Megan").on("click", function () {
-		$(".orderlist").append('<div class="item"> <li> Megan- $4 </li> <button class="x"> x </button> </div>');
+		whoppers+=1;
+		$(".whopper").remove();
+		$(".orderlist").append('<div class="item whopper"> <li> Megan- $4 x'+whoppers+' </li> <button class="x"> x </button> </div>');
 	});
 	$(".Double").on("click", function () {
-		$(".orderlist").append('<div class="item"> <li> Double- $5 </li> <button class="x"> x </button> </div>');
+		doubles+=1;
+		$(".double").remove();
+		$(".orderlist").append('<div class="item double"> <li> Double- $5 x'+doubles+'</li> <button class="x"> x </button> </div>');
 	});
 
 }
