@@ -12,7 +12,11 @@ var main = function () {
 		sliders=0;
 		whoppers=0;
 		doubles=0;
+		
+		
+
 	});
+	console.log("Hello World");
 }
 
 var add = function () {
@@ -20,20 +24,33 @@ var add = function () {
 	
 	$(".Slider").on("click", function () {
 		sliders+=1;
-		$(".slider").remove();
-		$(".orderlist").append('<div class="item slider"> <li> Slider- $3 x'+sliders+' </li> <button class="x"> x </button> </div>');
+		if (sliders === 1) {
+			$(".orderlist").append('<div class="item slider"> <li> Slider- $3 x'+sliders+'</li> <button class="x"> x </button> </div>');
+		}
+		else {
+			$('.slider').html('<li> Slider- $3 x'+sliders+'</li> <button class="x"> x </button> </div>');
+		}
+
 
 	});
 
 	$(".Megan").on("click", function () {
 		whoppers+=1;
-		$(".whopper").remove();
-		$(".orderlist").append('<div class="item whopper"> <li> Megan- $4 x'+whoppers+' </li> <button class="x"> x </button> </div>');
+		if (whoppers ===1) {
+			$(".orderlist").append('<div class="item whopper"> <li> Megan- $4 x'+whoppers+' </li> <button class="x"> x </button> </div>');
+		}
+		else {
+			$('.whopper').html('<li> whopper- $4 x'+whoppers+'</li> <button class="x"> x </button> </div>');
+		}
 	});
 	$(".Double").on("click", function () {
 		doubles+=1;
-		$(".double").remove();
-		$(".orderlist").append('<div class="item double"> <li> Double- $5 x'+doubles+'</li> <button class="x"> x </button> </div>');
+		if (doubles ===1) {
+			$(".orderlist").append('<div class="item double"> <li> Double- $5 x'+doubles+'</li> <button class="x"> x </button> </div>');
+		}
+		else {
+			$('.double').html('<li> double- $5 x'+doubles+'</li> <button class="x"> x </button> </div>');
+		}
 	});
 
 }
@@ -46,11 +63,8 @@ var clear = function () {
 	});
 }
 
-var date = function () {
-	$("h2").html( today.toDateString().substring(0,3));
-}
 
 $(document).ready(main);
 $(document).ready(add);
 $(document).ready(clear);
-$(document).ready(date);
+// $(document).ready(date);
